@@ -1,14 +1,14 @@
 import React from 'react';
 import { UserRound, Bookmark, Plus } from 'lucide-react';
-const Card = () => {
+const Card = (props) => {
   return (
     <div className="card">
-      <img src="src/assets/nehajethwani.jpg" alt="" />
-      <h2>Neha Jethwani</h2>
-      <p>TikTok star known for posting expressive lip sync videos and dramatic edits, often featuring slow motion action.</p>
+      <img src={props.image} alt="" />
+      <h2>{props.user}</h2>
+      <p>{props.about}</p>
       <div className='bottom'>
-        <div className="one"><UserRound /><span>1.9m</span></div>
-        <div className="two"><Bookmark /><span>210k</span></div>
+        <div className="one"><UserRound /><span>{props.followers}</span></div>
+        <div className="two"><Bookmark /><span>{props.bookmarks}</span></div>
         <button><span>Follow</span><Plus /></button>
       </div>
     </div>
