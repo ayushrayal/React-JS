@@ -77,8 +77,8 @@ const App = () => {
 
   return (
     <div className="herosection">
-      {people.map((person) => (
-        <Card
+      {people.map((person, idx) => (
+        <Card key={idx}
           user={person.name}
           followers={person.instagramFollowers}
           bookmarks={person.savedPosts}
