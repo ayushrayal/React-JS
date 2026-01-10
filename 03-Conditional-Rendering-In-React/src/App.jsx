@@ -1,34 +1,13 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
-function App() {
-  const [count, setCount] = useState(0)
-
+import React from 'react'
+import LoginPage from './components/DashBoard.jsx'
+const App = () => {
+  const login = true;
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className='h-screen w-full dark:bg-emerald-950 flex items-center justify-center flex-col gap-6'>
+      <h1 className="text-8xl font-bold text-emerald-300">Conditional Rendering in React</h1>
+      <h6 className="text-2xl font-semibold text-emerald-200">Learn how to conditionally render elements in React</h6>
+      {login ? <LoginPage user="Ayush Rayal" /> : <h2 className='text-5xl text-emerald-300'>Please log in to continue</h2>}
+    </div>
   )
 }
 
