@@ -6,7 +6,7 @@ const LeftSideContent = () => {
         <p className='w-96 tracking-widest'>Depending on the customer's satisfaction and access to banking products, potential target audience can be divided into three groups.</p>
       </div>
       <div className='text-6xl'>
-        <i class="ri-arrow-right-up-line"></i>
+        <i className="ri-arrow-right-up-line"></i>
       </div>
     </div>
   )
